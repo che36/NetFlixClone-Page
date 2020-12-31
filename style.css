@@ -1,0 +1,643 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;1,300&display=swap');
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Roboto', sans-serif;
+}
+body {
+	background: #000;
+}
+.container .head {
+	position: absolute;
+	top: 0;
+	left: 0;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	width: 100%;
+	padding: 0 50px;
+	z-index: 1000000;
+}
+.container .head img {
+	width: 13%;
+}
+.container .head a {
+	color: #fff;
+	text-decoration: none;
+	background-color: #e50914;
+	padding: 8px 18px;
+	border-radius: 5px;
+}
+.banner {
+	width: 100%;
+	height: 100vh;
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-bottom: 0.6rem solid #111;
+}
+.banner::before {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 400px;
+	z-index: 1;
+	background: linear-gradient(to bottom, #000, transparent);
+}
+.banner::after {
+	content: "";
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 400px;
+	z-index: 1;
+	background: linear-gradient(to top, #000, transparent);
+}
+.banner .fit {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	object-fit: cover;
+}
+.banner .box {
+	position: absolute;
+	top: 55%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	z-index: 1000;
+}
+.banner .box .heading {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+}
+.banner .box .heading h2 {
+	font-size: 3.125rem;
+	color: #fff;
+	letter-spacing: 2px;
+	width: 80%;
+}
+.banner .box .heading h5 {
+	font-size: 1.625rem;
+	color: #fff;
+	font-weight: 400;
+	padding: 1rem 0;
+}
+.banner .box .heading p {
+	font-size: 1.2rem;
+	color: #fff;
+	font-weight: 500;
+	padding: 15px 0;
+	padding-bottom: 20px;
+}
+.banner .box .search {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+}
+.banner .box .search input {
+	font-size: 16px;
+	border: 1px solid #8c8c8c;
+	outline: none;
+	color: #000;
+	border-radius: 2px;
+	padding: 10px 10px 0 0;
+	min-width: 400px;
+	height: 60px;
+	align-items: center;
+}
+.banner .box .search a {
+	text-decoration: none;
+	text-transform: uppercase;
+	color: #fff;
+	font-weight: 400;
+	letter-spacing: 0.1px;
+	border-radius: 2px;
+	background-color: #e50914;
+	box-shadow: 0 1px 0 rgb(0, 0, 0, 0.45);
+	font-size: 1.625rem;
+	line-height: 60px;
+	min-width: 192px;
+	padding: 0 30px;
+}
+.part1 {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	align-items: center;
+	padding: 2rem 4rem;
+	border-bottom: 0.6rem solid #111;
+}
+.part1 .talk {
+	width: 40%;
+}
+.part1 .talk h1 {
+	font-size: 3.3rem;
+	letter-spacing: 2px;
+	padding-bottom: 10px;
+	color: #fff;
+}
+.part1 .talk p {
+	font-size: 1.7rem;
+	color: #fff;
+}
+.part1 .img {
+	width: 45%;
+}
+.part1 .img img {
+	width: 100%;
+}
+.part2 {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	align-items: center;
+	padding: 2rem 4rem;
+	border-bottom: 0.6rem solid #111;
+}
+.part2 .talk {
+	width: 48%;
+}
+.part2 .talk h1 {
+	font-size: 3.3rem;
+	letter-spacing: 2px;
+	padding-bottom: 10px;
+	color: #fff;
+}
+.part2 .talk p {
+	font-size: 1.7rem;
+	color: #fff;
+}
+.part2 .img {
+	width: 45%;
+}
+.part2 .img img {
+	width: 100%;
+}
+.list {
+	width: 60%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	margin: auto;
+}
+.list h1 {
+	color: #fff;
+	font-size: 3rem;
+	padding: 3rem 0 4rem 0;
+}
+.accordian {
+	display: block;
+}
+
+.accordian .card {
+	margin-bottom: 20px;
+	float: left;
+	width: 100%;
+}
+.accordian .card .card-header h3 {
+	cursor: pointer;
+	color: #ffffff;
+	position: relative;
+	background-color: #303030;
+	margin: 0;
+	padding: 22px 44px;
+}
+.accordian .card .card-header {
+	position: relative;
+}
+.accordian .card .card-header span {
+	position: absolute;
+	right: 20px;
+	top: 12px;
+	height: 25px;
+	width: 25px;
+	background-color: #303030;
+	color: #fff;
+	text-align: center;
+	line-height: 46px;
+	font-size: 13px;
+}
+
+.accordian .card .card-body {
+	padding: 20px;
+	background-color: #303030;
+	border-top: 2px solid #000;
+}
+.accordian .card .card-body {
+	display: none;
+}
+.accordian .card .card-body p {
+	font-size: 1.7rem;
+  font-weight: 400;
+	line-height: 30px;
+	color: #fff;
+	margin: 0px;
+}
+.banner2 {
+	border-bottom: 0.6rem solid #111;
+}
+.banner2 .box {
+	margin: 4rem 0;
+}
+.banner2 .box .heading {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+}
+.banner2 .box .heading h2 {
+	font-size: 3.125rem;
+	color: #fff;
+	letter-spacing: 2px;
+	width: 80%;
+}
+.banner2 .box .heading h5 {
+	font-size: 1.625rem;
+	color: #fff;
+	font-weight: 400;
+	padding: 1rem 0;
+}
+.banner2 .box .heading p {
+	font-size: 1.2rem;
+	color: #fff;
+	font-weight: 500;
+	padding: 15px 0;
+	padding-bottom: 20px;
+}
+.banner2 .box .search {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+}
+.banner2 .box .search input {
+	font-size: 16px;
+	border: 1px solid #8c8c8c;
+	outline: none;
+	color: #000;
+	border-radius: 2px;
+	padding: 10px 10px 0 0;
+	min-width: 400px;
+	height: 60px;
+	align-items: center;
+}
+.banner2 .box .search a {
+	text-decoration: none;
+	text-transform: uppercase;
+	color: #fff;
+	font-weight: 400;
+	letter-spacing: 0.1px;
+	border-radius: 2px;
+	background-color: #e50914;
+	box-shadow: 0 1px 0 rgb(0, 0, 0, 0.45);
+	font-size: 1.625rem;
+	line-height: 60px;
+	min-width: 190px;
+	padding: 0 30px;
+}
+.footer {
+	display: flex;
+  grid-gap: 1rem;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  text-align: center;
+  padding: 1rem;
+  justify-content:center;
+  align-items: center;
+}
+.footer .one{
+  padding: 20px 40px;
+}
+.footer .one li a {
+	color: gray;
+	text-decoration: none;
+}
+.footer .one li a:hover {
+	border-bottom: 1px solid #ccc;
+}
+/*---------------Media Queries--------------------*/
+@media only screen and (max-width:1024px) and     (min-width:768px){
+    .container .head{
+      width: 280%;
+      height: 237px;
+    }
+  .container .head img {
+    width: 23%;
+    }
+    .container .head a {
+      padding: 31px 28px;
+      width: 102px;
+      height: 85px;
+    }
+    
+    .banner{
+      width: 280%;
+      height: 1614px;
+    }
+    .banner .box .heading h2 {
+    font-size: 6.125rem;
+    letter-spacing: 6px;
+    width: 110%;
+    }
+    .banner .box .heading h5 {
+    font-size: 3.625rem;
+    padding: 1rem 0;
+    }
+    .banner .box .heading p {
+    font-size: 2.2rem;
+    padding: 18px 0;
+    padding-bottom: 26px;
+    }
+    .banner .box .search input {
+    min-width: 753px;
+    }
+    .part1{
+     width: 280%;
+    }
+    .part1 .talk {
+      width: 40%;
+    }
+    .part1 .talk h1 {
+    font-size: 8.3rem;
+    }
+    .part1 .talk p {
+    font-size: 3.7rem;
+    }
+    .part1 .img {
+      width: 80%;
+    }
+    .part2{
+      width: 280%;
+    }
+    .part2 .img {
+      width: 66%;
+    }
+    .part2 .talk {
+      width: 27%;
+    }
+     .part2 .talk p {
+      font-size: 3.7rem;
+    }
+    .list{
+      width: 280%;
+    }
+    .list h1 {
+      font-size: 4rem;
+    }
+    .accordian .card .card-header h3 {
+      font-size: 4.5rem;
+    }
+    .accordian .card .card-body {
+    padding: 10px;
+    }
+    .accordian .card .card-body p {
+    font-size: 2.7rem;
+    line-height: 60px;
+  }
+    .banner2 {
+      width: 280%;
+    }
+    .banner2 .box .heading p {
+    font-size: 2.2rem;
+    }
+    .footer{
+     width: 2001px;
+    }
+     .footer .one li a {
+      font-size: 36px;
+  }
+}
+@media(max-width:425px){
+   .container .head{
+      width: 280%;
+      height: 237px;
+    }
+  .container .head img {
+    width: 40%;
+    }
+    .container .head a {
+      padding: 27px 21px;
+      width: 85px;
+      height: 72px;
+    }
+    .banner{
+      width: 280%;
+      height: 1617px;
+    }
+    .banner .box .heading h2 {
+    font-size: 5.125rem;
+    letter-spacing: 2px;
+    width: 144%;
+    }
+    .banner .box .heading h5 {
+    font-size: 2.625rem;
+    padding: 2rem 0;
+    }
+    .banner .box .heading p {
+    font-size: 2.2rem;
+    }
+    .banner .box .search a {
+      min-width: 207px;
+    }
+    .part1{
+      width: 280%;
+    }
+    .part1 .talk {
+      width: 40%;
+    }
+    .part1 .talk p {
+    font-size: 1.9rem;
+   }
+    .part1 .img {
+      width: 80%;
+    }
+    .part2{
+      width: 280%;
+    }
+    .part2 .img {
+      width: 66%;
+    }
+    .part2 .talk {
+      width: 27%;
+    }
+    .part2 .talk p {
+    font-size: 2.1rem;
+  }
+    .list{
+      width: 280%;
+    }
+    .list h1 {
+      font-size: 4rem;
+    }
+    .accordian .card .card-header h3 {
+      font-size: 3rem;
+    }
+    .accordian .card .card-body {
+    padding: 10px;
+    }
+    .accordian .card .card-body p {
+    font-size: 2.7rem;
+    line-height: 55px;
+  }
+    .banner2 {
+      width: 280%;
+    }
+    .banner2 .box .heading p {
+    font-size: 2rem;
+   }
+    .footer{
+      width: 1168px;
+    }
+    .footer .one li a {
+      font-size: 34px;
+ }
+}
+@media(max-width:375px){
+    .container .head{
+      width: 262%;
+      height: 159px;
+    }
+  .container .head img {
+    width: 40%;
+    }
+    .container .head a {
+      padding: 27px 21px;
+      width: 85px;
+      height: 72px;
+    }
+    .banner {
+    width: 281%;
+    height: 1627px;
+  }
+  .banner .box .heading p {
+    font-size: 2.2rem;
+  }
+  .banner .box .search a {
+      min-width: 207px;
+    }
+  .part1{
+      width: 280%;
+      height: 578px;
+    }
+    
+    .part1 .talk {
+      width: 40%;
+    }
+    .part1 .img {
+      width: 80%;
+    }
+    .part2{
+      width: 281%;
+    }
+    .part2 .img {
+      width: 280%;
+    }
+    .part2 .talk {
+      width: 27%;
+    }
+    .list{
+     width: 281%;
+    }
+    .accordian .card .card-header h3 {
+      font-size: 2.8rem;
+    }
+    .accordian .card .card-body {
+    padding: 10px;
+    }
+    .accordian .card .card-body p {
+    font-size: 2.3rem;
+    line-height: 51px;
+  }
+    .banner2 {
+      width: 281%;
+    }
+    .banner2 .box .heading p {
+    font-size: 2.8rem;
+  }
+   .footer {
+    width: 1056px;
+    height: 411px;
+   }
+  .footer .one li a {
+   font-size: 1.8rem;
+  }
+}
+@media(max-width:320px){
+    .container .head{
+      width: 280%;
+      height: 159px;
+    }
+  .container .head img {
+    width: 40%;
+    }
+    .container .head a {
+      padding: 27px 21px;
+      width: 85px;
+      height: 75px;
+    }
+    .banner{
+      width: 291%;
+      height: 1685px;
+    }
+    .banner .box .search a {
+      min-width: 207px;
+    }
+    .part1{
+      width: 290%;
+      height: 620px;
+    }
+    .part1 .talk {
+      width: 40%;
+    }
+    .part1 .img {
+      width: 80%;
+    }
+    .part2{
+      width: 290%;
+    }
+    .part2 .img {
+      width: 66%;
+    }
+    .part2 .talk {
+      width: 27%;
+    }
+    .list{
+      width: 292%;
+    }
+    .accordian .card .card-header h3 {
+      font-size: 2.5rem;
+    }
+    .accordian .card .card-body {
+    padding: 10px;
+    }
+    .accordian .card .card-body p {
+    font-size: 2.3rem;
+    line-height: 50px;
+  }
+    
+    .banner2 {
+     width: 291%;
+    }
+    .banner2 .box .heading p {
+      font-size: 2rem;
+    }
+    .footer {
+    width: 910px;
+    height: 518px;
+    }
+    .footer .one li a {
+    font-size: 1.8rem;
+}
+}
